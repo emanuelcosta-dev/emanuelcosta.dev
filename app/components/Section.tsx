@@ -23,12 +23,13 @@ export default function Section({
     >
       <h2
         className={clsx(
-          "shrink-0 md:w-32",
+          "shrink-0 md:w-32 animate-in",
           headingAlignment === "right" && "md:text-right",
           invert
-            ? "font-medium text-primary-foreground"
-            : "text-secondary-foreground",
+            ? "font-medium text-muted-foreground"
+            : "text-muted-foreground",
         )}
+        style={{ "--index": 2 } as React.CSSProperties}
       >
         {heading}
       </h2>

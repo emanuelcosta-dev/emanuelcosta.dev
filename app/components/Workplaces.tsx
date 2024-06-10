@@ -21,17 +21,14 @@ function Workplace({ title, company, imageSrc, date, link }: Workplace) {
           alt={company}
           width={48}
           height={48}
-          className={clsx(
-            "rounded-full",
-            company === "University of Houston" && "bg-neutral-50",
-          )}
+          className={clsx("rounded-full")}
         />
         <div className="flex flex-col gap-px">
           <p className={link ? "external-arrow" : ""}>{title}</p>
-          <p className="text-secondary">{company}</p>
+          <p className="text-muted-foreground">{company}</p>
         </div>
       </div>
-      {date && <time className="text-secondary">{date}</time>}
+      {date && <time className="text-muted-foreground">{date}</time>}
     </>
   );
   return (
@@ -44,7 +41,7 @@ function Workplace({ title, company, imageSrc, date, link }: Workplace) {
           {content}
         </Link>
       ) : (
-        <div className="flex justify-between ">{content}</div>
+        <div className="flex justify-between">{content}</div>
       )}
     </li>
   );
@@ -52,7 +49,10 @@ function Workplace({ title, company, imageSrc, date, link }: Workplace) {
 
 export default function Workplaces({ items }: { items: Workplace[] }) {
   return (
-    <ul className="flex flex-col gap-8 animated-list">
+    <ul
+      className="flex flex-col gap-8 animate-in"
+      style={{ "--index": 2 } as React.CSSProperties}
+    >
       {items.map(Workplace)}
     </ul>
   );

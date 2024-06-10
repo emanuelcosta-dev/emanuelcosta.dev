@@ -10,14 +10,20 @@ export default function Home() {
     <div className="flex flex-col gap-16 md:gap-24">
       <div className="flex flex-col gap-8">
         <div className="space-y-4">
-          <h1 className="animate-in text-3xl font-semibold tracking-tight text-primary">
+          <h1
+            className="animate-in text-3xl font-semibold tracking-tight text-primary"
+            style={{ "--index": 1 } as React.CSSProperties}
+          >
             Hi there, I&apos;m Emanuel!
           </h1>
         </div>
       </div>
       <Section heading="Work" headingAlignment="left">
         <div className="flex w-full flex-col gap-8">
-          <p>
+          <p
+            className="animate-in"
+            style={{ "--index": 2 } as React.CSSProperties}
+          >
             Experienced Full Stack Web Developer with a passion for creating
             dynamic and innovative solutions. With a passion for crafting
             dynamic web applications, I bring a wealth of expertise in
