@@ -28,8 +28,8 @@ export default function ThemeSwitcher() {
       <Listbox value={theme} onChange={(value) => setTheme(value)}>
         {({ open }) => {
           const iconClassName = clsx(
-            "w-5 h-5 text-secondary hover:text-primary cursor-pointer transition-colors",
-            open ? "text-primary" : "text-secondary",
+            "w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors",
+            open ? "text-primary" : "text-muted-foreground",
           );
           return (
             <div className="relative">

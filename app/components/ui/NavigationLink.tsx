@@ -19,7 +19,7 @@ export default function NavigationLink({
     <Link
       className={clsx(
         "px-4 py-2 rounded-lg text-sm hover:text-primary transition-colors",
-        active ? "bg-secondary text-primary" : "text-secondary",
+        active ? "bg-secondary text-primary" : "text-muted-foreground",
       )}
       href={href}
     >

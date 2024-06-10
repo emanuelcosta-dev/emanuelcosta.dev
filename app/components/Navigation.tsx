@@ -42,11 +42,9 @@ export default function Navigation() {
             </li>
           ))}
         </ul>
-
         <div className="ml-auto flex h-8 w-8 items-center justify-center md:ml-0">
           <ThemeSwitcher />
         </div>
-
         <Popover className="relative md:hidden">
           <Popover.Button className="flex h-8 w-8 items-center justify-center rounded-lg text-secondary">
             <Bars3Icon className="h-5 w-5 cursor-pointer text-secondary transition-colors hover:text-primary" />
