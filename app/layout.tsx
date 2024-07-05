@@ -1,8 +1,8 @@
+import Navigation from "@/app/components/Navigation";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import Navigation from "@/app/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={
           (inter.className,
-          "antialiased bg-white dark:bg-black text-primary width-full")
+          "antialiased bg-background dark:bg-background text-primary width-full")
         }
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
