@@ -11,14 +11,14 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col gap-24">
-        <div className="">
-          <h1 className="text-4xl font-bold leading-tight animate-in">
+        <div
+          className="animate-in"
+          style={{ "--index": 1 } as React.CSSProperties}
+        >
+          <h1 className="text-4xl font-bold leading-tight">
             Hey, I&apos;m Emanuel!
           </h1>
-          <p
-            className="max-w-lg animate-in text-muted-foreground pt-3"
-            style={{ "--index": 1 } as React.CSSProperties}
-          >
+          <p className="max-w-lg text-muted-foreground pt-3">
             I&apos;m a passionate Web Developer with a strong background in
             building web applications. I love everything tech, productivity and
             keyboards.
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="flex w-full flex-col gap-8">
             <p
               className="animate-in"
-              style={{ "--index": 3 } as React.CSSProperties}
+              style={{ "--index": 2 } as React.CSSProperties}
             >
               Experienced Full Stack Web Developer with a passion for creating
               dynamic and innovative solutions. With a passion for crafting
