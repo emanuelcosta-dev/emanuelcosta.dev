@@ -1,3 +1,4 @@
+import Footer from "@/app/components/Footer";
 import Navigation from "@/app/components/Navigation";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
@@ -19,15 +20,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={
-          (inter.className,
-          "antialiased bg-background dark:bg-background text-primary width-full")
-        }
+        className={`${inter.className} antialiased bg-background dark:bg-background text-primary min-h-screen flex flex-col`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation />
-          <div className="mx-auto max-w-[700px] px-6 pb-24 pt-16 md:px-6 md:pb-44 md:pt-20">
-            {children}
+          <main className="flex-grow">
+            <div className="mx-auto max-w-[700px] px-6 py-16 md:px-6 md:py-24">
+              {children}
+            </div>
+          </main>
+          <div className="w-full bg-background">
+            <div className="mx-auto px-6">
+              <Footer />
+            </div>
           </div>
         </ThemeProvider>
       </body>
