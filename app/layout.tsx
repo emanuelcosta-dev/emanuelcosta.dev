@@ -12,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Emanuel Costa",
   description: "Web Developer",
+  metadataBase: new URL("https://emanuelcosta.dev"),
   openGraph: {
     title: "Emanuel Costa",
     description: "Web Developer",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Emanuel Costa",
     images: [
       {
-        url: "/meta/meta-tags.webp",
+        url: "https://www.emanuelcosta.dev/meta/meta-tags.webp",
         width: 1200,
         height: 628,
       },
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Emanuel Costa",
     description: "Web Developer",
-    images: ["/meta/meta-tags.webp"],
+    images: "https://www.emanuelcosta.dev/meta/meta-tags.webp",
   },
 };
 
