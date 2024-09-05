@@ -2,7 +2,6 @@
 
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
-import Link from "next/link";
 import React, { useCallback } from "react";
 
 interface WorkExperience {
@@ -98,13 +97,14 @@ function ExperienceCard({
             <h3 className="text-xl font-semibold text-primary mb-2">
               {exp.position}
             </h3>
-            <Link
+            <a
               href={exp.companyUrl}
+              target="_blank"
               className="inline-block text-lg font-medium text-muted-foreground mb-3 relative group"
             >
               {exp.company}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-            </Link>
+            </a>
             <p className="text-secondary-foreground mb-4">{exp.description}</p>
           </div>
           <div className="flex items-center text-sm text-muted-foreground mt-4">

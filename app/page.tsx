@@ -35,12 +35,23 @@ export default function Home() {
           </Avatar>
 
           <p className="text-muted-foreground mt-4">
-            Currently at <Link href="https://coremedia.com">Coremedia</Link>.
+            Currently at{" "}
+            <a
+              href="https://coremedia.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary border-b-2 border-current pb-0.5 hover:border-primary transition-colors"
+            >
+              Coremedia
+            </a>
+            .
           </p>
 
           <div className="mt-4 flex space-x-4">
             <a
               href="https://github.com/emanuelcosta-dev"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-1 py-2 rounded-lg font-bold transform hover:-translate-y-1 transition duration-400"
             >
               Github
@@ -48,6 +59,8 @@ export default function Home() {
             </a>
             <a
               href="https://linkedin.com/in/emanuel-costa/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center px-1 py-2 rounded-lg font-bold transform hover:-translate-y-1 transition duration-400"
             >
               LinkedIn

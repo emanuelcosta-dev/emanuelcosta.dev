@@ -11,27 +11,29 @@ export default function Contact() {
     >
       <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
       <div className="flex flex-col space-y-4">
-        <Link
+        <a
           href="https://github.com/emanuelcosta-dev"
+          target="_blank"
           className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
         >
           <FaGithub className="w-6 h-6" />
           <span>GitHub</span>
-        </Link>
-        <Link
+        </a>
+        <a
           href="https://linkedin.com/in/emanuel-costa/"
+          target="_blank"
           className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
         >
           <FaLinkedin className="w-6 h-6" />
           <span>LinkedIn</span>
-        </Link>
-        <Link
+        </a>
+        <a
           href="mailto:hello@emanuelcosta.dev"
           className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
         >
           <EnvelopeIcon className="w-6 h-6" />
           <span>hello@emanuelcosta.dev</span>
-        </Link>
+        </a>
       </div>
     </section>
   );
