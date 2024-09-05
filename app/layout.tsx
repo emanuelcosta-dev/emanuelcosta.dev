@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Emanuel Costa",
     images: [
       {
-        url: "https://www.emanuelcosta.dev/meta/meta-tags.webp",
+        url: "https://www.emanuelcosta.dev/meta/meta-tags.png",
         width: 1200,
         height: 628,
       },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Emanuel Costa",
     description: "Web Developer",
-    images: "https://www.emanuelcosta.dev/meta/meta-tags.webp",
+    images: "https://www.emanuelcosta.dev/meta/meta-tags.png",
   },
 };
 
