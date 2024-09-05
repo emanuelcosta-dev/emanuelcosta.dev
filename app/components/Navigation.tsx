@@ -17,11 +17,14 @@ import NavigationLink from "@/app/components/ui/NavigationLink";
 import Image from "next/image";
 
 const links = [
-  { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
-  { label: "Craft", href: "/craft" },
-  { label: "Community", href: "/community" },
+  { label: "About", href: "/" },
   { label: "Gear", href: "/gear" },
+  {
+    label: "Resume",
+    href: "https://cv.emanuelcosta.dev",
+    target: "_blank",
+    rel: "noopener noreferrer",
+  },
 ];
 
 export default function Navigation() {
@@ -33,24 +36,30 @@ export default function Navigation() {
         <Link href="/" className="shrink-0 text-primary">
           <Image
             src="/logo_dark.svg"
-            alt="Vercel Logo"
+            alt="Emanuel Costa"
             className="dark:invert"
             width={29}
             height={36}
             priority
           />
         </Link>
-        {/* <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-1 md:flex">
           {links.map((link) => (
             <li key={link.href}>
-              <NavigationLink href={link.href}>{link.label}</NavigationLink>
+              <NavigationLink
+                href={link.href}
+                target={link.target}
+                rel={link.rel}
+              >
+                {link.label}
+              </NavigationLink>
             </li>
           ))}
-        </ul> */}
+        </ul>
         <div className="ml-auto flex h-8 w-8 items-center justify-center md:ml-0">
           <ThemeSwitcher />
         </div>
-        {/* <Popover className="relative md:hidden">
+        <Popover className="relative md:hidden">
           <PopoverButton className="flex h-8 w-8 items-center justify-center rounded-lg text-secondary">
             <Bars3Icon className="h-5 w-5 cursor-pointer text-secondary transition-colors hover:text-primary" />
           </PopoverButton>
@@ -63,7 +72,7 @@ export default function Navigation() {
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-1"
           >
-            <PopoverPanel className="absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm">
+            <PopoverPanel className="bg-background absolute right-0 z-10 mt-2 w-40 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base shadow-md focus:outline-none sm:text-sm">
               <div className="grid">
                 {links.map((link) => (
                   <Link
@@ -82,7 +91,7 @@ export default function Navigation() {
               </div>
             </PopoverPanel>
           </Transition>
-        </Popover> */}
+        </Popover>
       </nav>
     </header>
   );
