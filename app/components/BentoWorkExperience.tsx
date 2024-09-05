@@ -39,7 +39,7 @@ const experiences: WorkExperience[] = [
     duration: "Feb 2020 - Jul 2020",
     location: "Porto, PT",
     description:
-      "Assisted in the creation of integrations with major providers like Google and Facebook, as well as the development of several high conversion websites.",
+      "Collaborated on the development of integrations with leading providers such as Google and Facebook, alongside the creation of multiple high-conversion websites.",
   },
 ];
 
