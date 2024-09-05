@@ -16,7 +16,7 @@ interface WorkExperience {
 
 const experiences: WorkExperience[] = [
   {
-    company: "Coremedia",
+    company: "CoreMedia",
     companyUrl: "https://coremedia.com",
     position: "Full Stack Engineer",
     duration: "Sep 2021 - Present",
