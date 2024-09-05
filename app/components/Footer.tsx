@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <hr className="border-border mb-4" />
+      <hr className="border-border" />
       <div className="mx-auto max-w-[700px] px-6 py-12 text-sm text-muted-foreground">
         © {currentYear} Emanuel. All rights reserved.
       </div>
