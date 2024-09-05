@@ -12,6 +12,27 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Emanuel Costa",
   description: "Web Developer",
+  openGraph: {
+    title: "Emanuel Costa",
+    description: "Web Developer",
+    url: "https://emanuelcosta.dev",
+    siteName: "Emanuel Costa",
+    images: [
+      {
+        url: "/meta-tags.webp",
+        width: 1200,
+        height: 628,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Emanuel Costa",
+    description: "Web Developer",
+    images: ["/meta-tags.webp"],
+  },
 };
 
 export default function RootLayout({
