@@ -1,4 +1,5 @@
 import BentoWorkExperience from "@/app/components/BentoWorkExperience";
+import Contact from "@/app/components/Contact";
 import Link from "@/app/components/Link";
 import {
   Avatar,
@@ -25,7 +26,7 @@ export default function Home() {
               and keyboards.
             </p>
           </div>
-          <Avatar className="w-32 h-32 absolute top-2 right-0">
+          <Avatar className="w-24 h-24 sm:w-32 sm:h-32 absolute top-2 right-0 z-0">
             <AvatarImage
               src="https://github.com/emanuelcosta-dev.png"
               alt="@emanuelcosta-dev"
@@ -55,10 +56,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col gap-16 md:gap-24 mt-24">
         <BentoWorkExperience />
       </div>
+      <Contact />
     </>
   );
 }

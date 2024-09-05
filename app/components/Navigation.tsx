@@ -50,7 +50,7 @@ export default function Navigation() {
         <div className="ml-auto flex h-8 w-8 items-center justify-center md:ml-0">
           <ThemeSwitcher />
         </div>
-        <Popover className="relative md:hidden">
+        {/* <Popover className="relative md:hidden">
           <PopoverButton className="flex h-8 w-8 items-center justify-center rounded-lg text-secondary">
             <Bars3Icon className="h-5 w-5 cursor-pointer text-secondary transition-colors hover:text-primary" />
           </PopoverButton>
@@ -82,7 +82,7 @@ export default function Navigation() {
               </div>
             </PopoverPanel>
           </Transition>
-        </Popover>
+        </Popover> */}
       </nav>
     </header>
   );

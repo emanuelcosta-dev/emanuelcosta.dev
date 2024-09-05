@@ -1,14 +1,19 @@
 import React from "react";
 
-import { useEffect, useState } from "react";
-import { Listbox } from "@headlessui/react";
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOption,
+  ListboxOptions,
+} from "@headlessui/react";
 import clsx from "clsx";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 import * as Select from "@radix-ui/react-select";
 
-import { MoonIcon, CheckIcon } from "@heroicons/react/20/solid";
+import { CheckIcon, MoonIcon } from "@heroicons/react/20/solid";
 import { SunIcon } from "@heroicons/react/24/outline";
 
 export default function ThemeSwitcher() {
@@ -28,14 +33,14 @@ export default function ThemeSwitcher() {
       <Listbox value={theme} onChange={(value) => setTheme(value)}>
         {({ open }) => {
           const iconClassName = clsx(
-            "w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors",
-            open ? "text-primary" : "text-muted-foreground",
+            "w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-color",
+            open ? "text-primary" : "text-muted-foreground"
           );
           return (
             <div className="relative">
-              <Listbox.Button
+              <ListboxButton
                 className={clsx(
-                  "relative flex h-8 w-8 cursor-default items-center justify-center rounded-lg",
+                  "relative flex h-8 w-8 cursor-default items-center justify-center rounded-lg"
                 )}
               >
                 {resolvedTheme === "dark" ? (
@@ -43,25 +48,25 @@ export default function ThemeSwitcher() {
                 ) : (
                   <SunIcon className={iconClassName} />
                 )}
-              </Listbox.Button>
+              </ListboxButton>
               <AnimatePresence>
                 {open && (
-                  <Listbox.Options
+                  <ListboxOptions
                     as={motion.ul}
                     static
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ type: "spring", bounce: 0.3, duration: 0.3 }}
-                    className="w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base capitalize shadow-md focus:outline-none sm:text-sm"
+                    className="bg-background w-42 absolute right-0 z-10 mt-2 max-h-60 origin-top-right overflow-auto rounded-xl bg-contrast p-2 text-base capitalize shadow-md focus:outline-none sm:text-sm"
                   >
                     {themes.map((theme) => (
-                      <Listbox.Option
+                      <ListboxOption
                         key={theme}
                         className={({ active }) =>
                           clsx(
                             "relative cursor-default select-none rounded-md py-2 pl-10 pr-4",
-                            active ? "bg-secondary" : "",
+                            active ? "bg-secondary" : ""
                           )
                         }
                         value={theme}
@@ -85,9 +90,9 @@ export default function ThemeSwitcher() {
                             ) : null}
                           </>
                         )}
-                      </Listbox.Option>
+                      </ListboxOption>
                     ))}
-                  </Listbox.Options>
+                  </ListboxOptions>
                 )}
               </AnimatePresence>
             </div>

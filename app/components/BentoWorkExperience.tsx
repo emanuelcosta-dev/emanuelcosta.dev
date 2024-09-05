@@ -22,7 +22,7 @@ const experiences: WorkExperience[] = [
     duration: "Sep 2021 - Present",
     location: "Porto, PT",
     description:
-      "Led the development of cutting-edge web applications using React and Next.js, improving overall site performance by 40%.",
+      "Led the successful implementation of several projects with a major Spanish telecommunications provider, resulting in daily generation of thousands of leads.",
   },
   {
     company: "Optigest",
@@ -31,7 +31,7 @@ const experiences: WorkExperience[] = [
     duration: "Dec 2020 - Sep 2021",
     location: "Porto, PT",
     description:
-      "Developed and maintained full-stack applications using Node.js and React, resulting in a 25% increase in user engagement.",
+      "Played a key role in the development of the main product, multiple integrations with providers and core services of the company.",
   },
   {
     company: "Nemobile Applications",
@@ -40,15 +40,23 @@ const experiences: WorkExperience[] = [
     duration: "Feb 2020 - Jul 2020",
     location: "Porto, PT",
     description:
-      "Assisted in the creation of responsive websites and implemented SEO best practices, boosting client site traffic by an average of 30%.",
+      "Assisted in the creation of integrations with major providers like Google and Facebook, as well as the development of several high conversion websites.",
   },
 ];
 
 export default function BentoWorkExperience() {
   return (
     <div>
-      <h2 className="text-3xl font-bold text-primary mb-12">Work Experience</h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <h2
+        className="animate-in text-3xl font-bold text-primary mb-12"
+        style={{ "--index": 2 } as React.CSSProperties}
+      >
+        Work Experience
+      </h2>
+      <div
+        className="animate-in max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+        style={{ "--index": 2 } as React.CSSProperties}
+      >
         {experiences.map((exp, index) => (
           <ExperienceCard key={index} index={index} exp={exp} />
         ))}
