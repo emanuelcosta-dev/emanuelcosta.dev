@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     siteName: "Emanuel Costa",
     images: [
       {
-        url: "/meta-tags.webp",
+        url: "/meta/meta-tags.webp",
         width: 1200,
         height: 628,
       },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Emanuel Costa",
     description: "Web Developer",
-    images: ["/meta-tags.webp"],
+    images: ["/meta/meta-tags.webp"],
   },
 };
 
