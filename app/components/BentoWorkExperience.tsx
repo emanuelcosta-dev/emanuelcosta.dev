@@ -15,10 +15,19 @@ interface WorkExperience {
 
 const experiences: WorkExperience[] = [
   {
+    company: "Nintendo of Europe",
+    companyUrl: "https://www.nintendo.com/",
+    position: "Full Stack Developer",
+    duration: "Oct 2025 - Present",
+    location: "Frankfurt, DE",
+    description:
+      "Driving impact at Nintendo by designing and developing innovative internal tools and APIs to enhance business operations.",
+  },
+  {
     company: "CoreMedia",
     companyUrl: "https://coremedia.com",
-    position: "Full Stack Engineer",
-    duration: "Sep 2021 - Present",
+    position: "Full Stack Developer",
+    duration: "Sep 2021 - Oct 2025",
     location: "Porto, PT",
     description:
       "Led the successful implementation of several projects with a major Spanish telecommunications provider, resulting in daily generation of thousands of leads.",
@@ -39,7 +48,7 @@ const experiences: WorkExperience[] = [
     duration: "Feb 2020 - Jul 2020",
     location: "Porto, PT",
     description:
-      "Collaborated on the development of integrations with leading providers such as Google and Facebook, alongside the creation of multiple high-conversion websites.",
+      "Developed integrations with major providers like Google and Facebook and built high-conversion websites.",
   },
 ];
 
@@ -92,7 +101,7 @@ function ExperienceCard({
       className="relative group bg-background p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/20 overflow-hidden cursor-pointer transform hover:-translate-y-1 hover:scale-[1.02]"
     >
       <div className="relative z-10">
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full min-h-[280px]">
           <div className="flex-grow">
             <h3 className="text-xl font-semibold text-primary mb-2">
               {exp.position}
@@ -105,15 +114,17 @@ function ExperienceCard({
               {exp.company}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
             </a>
-            <p className="text-secondary-foreground mb-4">{exp.description}</p>
+            <p className="text-secondary-foreground">{exp.description}</p>
           </div>
-          <div className="flex items-center text-sm text-muted-foreground mt-4">
-            <Calendar className="h-4 w-4 mr-2 text-primary/60" />
-            <span>{exp.duration}</span>
-          </div>
-          <div className="flex items-center text-sm text-muted-foreground mt-2">
-            <MapPin className="h-4 w-4 mr-2 text-primary/60" />
-            <span>{exp.location}</span>
+          <div className="mt-auto pt-4">
+            <div className="flex items-center text-sm text-muted-foreground mb-2">
+              <Calendar className="h-4 w-4 mr-2 text-primary/60" />
+              <span>{exp.duration}</span>
+            </div>
+            <div className="flex items-center text-sm text-muted-foreground">
+              <MapPin className="h-4 w-4 mr-2 text-primary/60" />
+              <span>{exp.location}</span>
+            </div>
           </div>
         </div>
       </div>

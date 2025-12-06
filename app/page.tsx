@@ -37,12 +37,12 @@ export default function Home() {
           <p className="text-muted-foreground mt-4">
             Currently at{" "}
             <a
-              href="https://coremedia.com"
+              href="https://www.nintendo.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary border-b-2 border-current pb-0.5 hover:border-primary transition-colors"
             >
-              Coremedia
+              Nintendo of Europe
             </a>
             .
           </p>

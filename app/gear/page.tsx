@@ -21,10 +21,10 @@ const gearList: GearItem[] = [
         link: "https://www.apple.com/macbook-pro/",
       },
       {
-        name: "Dell UltraSharp 27-inch 4K Display",
+        name: "AOC AGON PRO AG276QZD2 27-inch QHD Display",
         description:
-          "Good 4k display that gives me screen real estate for development and accurate colors for design work.",
-        link: "https://www.dell.com/en-us/shop/dell-ultrasharp-27-4k-usb-c-hub-monitor-u2723qe/apd/210-bdpf/monitors-monitor-accessories",
+          "27-inch QHD OLED monitor with stunning colors, ultra-fast response times, and smooth 240Hz refresh rate.",
+        link: "https://eu.aoc.com/en/gaming/products/monitors/ag276qzd2",
       },
       {
         name: "Neo 65",
